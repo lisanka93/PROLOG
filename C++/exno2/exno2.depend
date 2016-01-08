@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1451339931 source:/home/user/C++/exno2/main.cpp
+	<iostream>
+	<sstream>
+	<string>
+	<stdio.h>
+	<string.h>
+
