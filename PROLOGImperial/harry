@@ -34,8 +34,6 @@ takesOption(SN, CN) :- student(SID, SN, _), optCourse(SCN, CN, _), enrolled_opt(
 %7
 takesAllOptions(SN, OptCourses) :- setof(CN, takesOption(SN,CN), OptCourses).
 
-
-
 %8
 translate([],[]).
 translate([Head|Tail],[Head1|Tail1]) :- student(Head, Head1,_), translate(Tail,Tail1).
