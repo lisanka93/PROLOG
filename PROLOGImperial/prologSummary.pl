@@ -72,8 +72,6 @@ perm2(L, [X|P]) :- del(X,L,L1), perm2(L1,P).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
 lengthcount([], 0).  %predefined in sicstus
 lengthcount([H|T], N) :- lengthcount(T,N1), N is N1 + 1.
 
@@ -85,11 +83,6 @@ oddlength(X) :- lengthcount(X, P) , 1 is mod(P,2).
 %shifts by one
 shift([H|T], Shifted) :- append(T, [H], Shifted).
 %logical because the head can be more than one element so it will give all the posible solutions with 1,2,3 etc members
-
-%rotates by N
-rotate([],_,[]) :- !.
-rotate(L1,N,L2) :-
-   length(L1,NL1), N1 is N mod NL1, split(L1,N1,S1,S2), append(S2,S1,L2).
 
 
 
