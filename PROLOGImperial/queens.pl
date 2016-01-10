@@ -1,3 +1,5 @@
+%member predefined
+
 eightqueens([]).
  
 eightqueens([X/Y|Rest]) :- eightqueens(Rest),
